@@ -5,7 +5,7 @@
 	
 <ul>
 	<li>
-		<a href="https://jobscrapper.yonghun16.repl.co/"> "웹 스크래퍼" 보러가기 </a>( replit.com)
+		<a href="https://jobscrapper.yonghun16.repl.co/"> "웹 스크래퍼" 보러가기 </a>
 	</li>
 </ul>
 </br>
