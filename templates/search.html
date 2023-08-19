@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Scrapper</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <style>
+      :root {
+        --primary: #00897b;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1><span class="keyword">"{{keyword}}"</span>에 대한 검색결과</h1>
+      </header>
+      <div>
+        <nav class="options">
+          <a href="/export?keyword={{keyword}}" class="export"
+            >파일로 내보내기</a
+          >
+          <a href="/">초기화면으로 돌아가기</a>
+        </nav>
+        <figure>
+          <table role="grid">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for job in jobs %}
+              <tr>
+                <td>{{job.position}}</td>
+                <td>{{job.company}}</td>
+                <td>{{job.location}}</td>
+                <td>
+                  <a href="{{job.link}}" target="_blank">Apply now &rarr;</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>
